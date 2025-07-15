@@ -10,7 +10,7 @@ public class HomeWork {
         // 2、寻找101-200之间的质数
         // findPrimes(101, 200);
         // 3、生成验证码
-        // System.out.println(generateVerificationCode());
+        System.out.println(generateVerificationCode());
         // 5、评委打分
         // System.out.println(score());
         // 6、加密
@@ -20,7 +20,7 @@ public class HomeWork {
         // 8、抽奖
         // lottery();
         // 9、双色球中奖模拟
-        lottery2();
+        // lottery2();
     }
 
     // 1、卖机票
@@ -78,16 +78,22 @@ public class HomeWork {
 
     // 3、生成验证码
     public static String generateVerificationCode() {
-        String code = "";
+        StringBuilder code = new StringBuilder();
         Random rand = new Random();
-        // 5位验证码，前四位为大写字母或者小写字母，最后一位为数字
+        // 5位验证码
         for (int i = 0; i < 4; i++) {
             // 0：大写字母，1：小写字母，2：数字
             int type = rand.nextInt(2);
-            code += type == 0 ? generateRandomChar(65, 90) : generateRandomChar(97, 122);
+            if(type == 0){
+                code.append(generateRandomChar(65, 90));
+            } else {
+                code.append(generateRandomChar(97, 122));
+            }
         }
-        code += generateRandomChar(48, 57);
-        return code;
+        // 生成一个随机位置，插入数字
+        int index = rand.nextInt(4);
+        code.insert(index, generateRandomChar(48, 57));
+        return code.toString();
     }
 
     // 3.1、生成一个随机的字符

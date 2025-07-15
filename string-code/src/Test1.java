@@ -4,7 +4,7 @@ public class Test1 {
         // test2();
         // test3();
         // test4();
-         test5();
+        test5();
     }
 
     // 1、字符串初始化及比较
@@ -80,9 +80,9 @@ public class Test1 {
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
                 upper++;
-            }else if (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
+            } else if (str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
                 lower++;
-            }else if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+            } else if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
                 num++;
             } else {
                 other++;
