@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Test3 {
+    private static final String ADD_STUDENT = "1";
+    private static final String DELETE_STUDENT = "2";
+    private static final String UPDATE_STUDENT = "3";
+    private static final String QUERY_STUDENT = "4";
+    private static final String EXIT = "5";
+
     public static void start() {
         Scanner sc = new Scanner(System.in);
         // 学生列表
@@ -15,11 +21,11 @@ public class Test3 {
             System.out.println("请输入你的选择：");
             String choose = sc.next();
             switch (choose) {
-                case "1" -> addStudent(students);
-                case "2" -> deleteStudent(students);
-                case "3" -> updateStudent(students);
-                case "4" -> queryStudent(students);
-                case "5" -> {
+                case ADD_STUDENT -> addStudent(students);
+                case DELETE_STUDENT -> deleteStudent(students);
+                case UPDATE_STUDENT -> updateStudent(students);
+                case QUERY_STUDENT -> queryStudent(students);
+                case EXIT -> {
                     break loop;
                 }
                 default -> System.out.println("输入有误");
