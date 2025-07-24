@@ -1,5 +1,7 @@
 package com.lizhengxing.demo1;
 
+import java.util.Objects;
+
 public class Student {
     private String id;
     private String name;
@@ -81,6 +83,20 @@ public class Student {
         this.address = address;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return age == student.age && Objects.equals(id, student.id) && Objects.equals(name, student.name) && Objects.equals(address, student.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, age, address);
+    }
+
+    @Override
     public String toString() {
         return "Student{id = " + id + ", name = " + name + ", age = " + age + ", address = " + address + "}";
     }
