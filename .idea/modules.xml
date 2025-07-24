@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/algorithm-code/algorithm-code.iml" filepath="$PROJECT_DIR$/algorithm-code/algorithm-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/api-code/api-code.iml" filepath="$PROJECT_DIR$/api-code/api-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/arrayList-code/arrayList-code.iml" filepath="$PROJECT_DIR$/arrayList-code/arrayList-code.iml" />
       <module fileurl="file://$PROJECT_DIR$/day02-code/day02-code.iml" filepath="$PROJECT_DIR$/day02-code/day02-code.iml" />
